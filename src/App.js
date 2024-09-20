@@ -1,15 +1,19 @@
 // src/App.js
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import SearchBar from './components/SearchBar';
 import BusinessList from './components/BusinessList';
+import SearchBar from './components/SearchBar';
 
 function App() {
+  const searchYelp = (term, location, sortBy) => {
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+    // You'll later implement the Yelp API call here
+  };
+
   return (
     <div className="App">
-      <Header />
-      <SearchBar />
+      <h1>Ravenous</h1>
+      <SearchBar onSearch={searchYelp} />
       <BusinessList />
     </div>
   );
