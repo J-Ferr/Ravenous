@@ -1,6 +1,6 @@
 // src/components/SearchBar.js
 import React, { useState } from 'react';
-import './SearchBar.css';
+import styles from './SearchBar.module.css';
 
 const sortByOptions = {
   'Best Match': 'best_match',
@@ -13,14 +13,13 @@ function SearchBar({ onSearch }) {
   const [location, setLocation] = useState('');
   const [sortBy, setSortBy] = useState('best_match');
 
-  // Helper method to dynamically generate the sorting options
   function renderSortByOptions() {
     return Object.keys(sortByOptions).map(option => {
       const sortByValue = sortByOptions[option];
       return (
         <li
           key={sortByValue}
-          className={sortBy === sortByValue ? 'active' : ''}
+          className={sortBy === sortByValue ? styles.active : ''}
           onClick={() => handleSortByChange(sortByValue)}
         >
           {option}
@@ -29,7 +28,6 @@ function SearchBar({ onSearch }) {
     });
   }
 
-  // Event handlers for input changes
   function handleTermChange(event) {
     setTerm(event.target.value);
   }
@@ -48,11 +46,11 @@ function SearchBar({ onSearch }) {
   }
 
   return (
-    <div className="SearchBar">
-      <div className="SearchBar-sort-options">
+    <div className={styles.SearchBar}>
+      <div className={styles['SearchBar-sort-options']}>
         <ul>{renderSortByOptions()}</ul>
       </div>
-      <div className="SearchBar-fields">
+      <div className={styles['SearchBar-fields']}>
         <input
           placeholder="Search Businesses"
           value={term}
@@ -64,7 +62,7 @@ function SearchBar({ onSearch }) {
           onChange={handleLocationChange}
         />
       </div>
-      <div className="SearchBar-submit">
+      <div className={styles['SearchBar-submit']}>
         <button onClick={handleSearch}>Let's Go</button>
       </div>
     </div>
