@@ -1,0 +1,54 @@
+/* src/components/Business.css */
+.Business {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .Business:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .Business h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff6347;
+  }
+  
+  .Business-information {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+  }
+  
+  .Business-address {
+    text-align: left;
+  }
+  
+  .Business-address p {
+    margin: 0;
+  }
+  
+  .Business-reviews {
+    text-align: right;
+  }
+  
+  .Business-reviews h3 {
+    margin: 5px 0;
+  }
+  
+  .rating {
+    color: #ff6347;
+  }
+  
