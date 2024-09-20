@@ -3,9 +3,10 @@ import React from 'react';
 import Business from './Business';
 import './BusinessList.css';
 
-// Hardcoded business data
+// Array of hardcoded business data
 const businesses = [
   {
+    id: 1,
     imageSrc: 'https://via.placeholder.com/200',
     name: 'Pizza Place',
     address: '123 Main St',
@@ -17,6 +18,7 @@ const businesses = [
     reviewCount: 150,
   },
   {
+    id: 2,
     imageSrc: 'https://via.placeholder.com/200',
     name: 'Sushi Bar',
     address: '456 Elm St',
@@ -28,6 +30,7 @@ const businesses = [
     reviewCount: 90,
   },
   {
+    id: 3,
     imageSrc: 'https://via.placeholder.com/200',
     name: 'Burger Joint',
     address: '789 Oak St',
@@ -37,14 +40,14 @@ const businesses = [
     category: 'Burgers',
     rating: 3.8,
     reviewCount: 120,
-  }
+  },
 ];
 
 function BusinessList() {
   return (
     <div className="BusinessList">
-      {businesses.map((business, index) => (
-        <Business key={index} business={business} />
+      {businesses.map(business => (
+        <Business key={business.id} business={business} />
       ))}
     </div>
   );
