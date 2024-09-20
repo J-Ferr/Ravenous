@@ -1,0 +1,12 @@
+/* src/components/Header.css */
+header {
+    background-color: #ff6347;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: white;
+    font-family: 'Arial', sans-serif;
+  }
+  
